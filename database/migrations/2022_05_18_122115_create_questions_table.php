@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('technology_id');
+            $table->foreign('technology_id')->references('id')->on('technologies');
             $table->string('question');
             $table->string('level');
             $table->string('answer');

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container  my-3">
     <form action="" method="post">
         <div class="row">
             <div class="col sm-4"></div>
@@ -35,7 +35,7 @@
             <div class="col sm-4"></div>
             <div class="col-sm-4">
                 <label for="address">Conditate Address</label>
-               <textarea name="address" id="" cols="30" rows="10" class="form-control" placeholder="Enter Conditate Addesss"></textarea>
+               <textarea name="address" id="" class="form-control" placeholder="Enter Conditate Addesss"></textarea>
             </div>
             <div class="col-sm-4"></div>
         </div>
@@ -44,17 +44,27 @@
             <div class="col sm-4"></div>
             <div class="col-sm-4">
                 <label for="skill">Select Skills</label>
-              <select name="skill" id="">
-                  <option value="php"></option>
-                  <option value="laravel"></option>
-                  <option value="Nodejs"></option>
-                  <option value="angularjs"></option>
-                  <option value="android"></option>
+                <br>
+              <select name="skill" id="" class="form-control">
+                  <option value="php">PHP</option>
+                  <option value="laravel">Laravel</option>
+                  <option value="Nodejs">Nodejs</option>
+                  <option value="angularjs">Angularjs</option>
+                  <option value="android">Android</option>
               </select>
             </div>
             <div class="col-sm-4"></div>
         </div>
 
+        <div class="row">
+            <div class="col sm-4"></div>
+            <div class="col-sm-4">
+                <label for="experience">Condidate Experience</label>
+                <input type="text" name="experience"class="form-control" placeholder="Enter Candidate Contact" >
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
 </form>
+<br><br>
 </div>
 @endsection
