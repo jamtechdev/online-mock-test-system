@@ -16,13 +16,13 @@ class CandidateSeeder extends Seeder
     public function run()
     {
 
-         \App\Models\Candidate::factory()->create([
-             'name' => 'Test User',
-             'email' => 'test123@gmail.com',
-             'phone'=>'4567898234',
-             'skill'=>'Nodejs',
-             'experience'=>'1 to 2 years',
-             'otp'=>rand(000, 999),
-         ]);
+        //  \App\Models\Candidate::factory()->create([
+        //      'name' => 'Test User',
+        //      'email' => 'test123@gmail.com',
+        //      'phone'=>'4567898234',
+        //      'skill'=>'Nodejs',
+        //      'experience'=>'1 to 2 years',
+        //      'otp'=>rand(000, 999),
+        //  ]);
     }
 }
