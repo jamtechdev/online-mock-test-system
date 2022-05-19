@@ -16,12 +16,13 @@ return new class extends Migration
         Schema::create('candidates', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('mobno');
             $table->string('email');
-            $table->string('phone');
-            $table->string('address');
-            $table->string('skill');
             $table->string('experience');
-            $table->string('otp');
+            $table->string('skill');
+            $table->string('status');
+            $table->string('note');
+            $table->string('password');
             $table->timestamps();
         });
     }

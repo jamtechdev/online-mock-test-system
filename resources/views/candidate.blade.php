@@ -1,8 +1,8 @@
-@extends('appdata')
+@extends('layouts.app')
 
 @section('content')
 
-<div class="container">
+<div class="container ">
     <form action="" method="post">
         <div class="row">
             <div class="col sm-4"></div>
@@ -35,7 +35,7 @@
             <div class="col sm-4"></div>
             <div class="col-sm-4">
                 <label for="address">Conditate Address</label>
-               <textarea name="address" id="" cols="30" rows="10" class="form-control" placeholder="Enter Conditate Addesss"></textarea>
+               <textarea name="address"  class="form-control" placeholder="Enter Conditate Addesss"></textarea>
             </div>
             <div class="col-sm-4"></div>
         </div>

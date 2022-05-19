@@ -15,10 +15,12 @@ return new class extends Migration
     {
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('summary');
             $table->unsignedBigInteger('technology_id');
-            $table->string('question');
-            $table->string('level');
-            $table->string('answer');
+            $table->enum('status',['active','inactive','pending']);
+            $table->enum('level',['easy','medium','hard']);
+            $table->foreign('technology_id')->references('id')->on('technologies');
             $table->timestamps();
         });
     }
