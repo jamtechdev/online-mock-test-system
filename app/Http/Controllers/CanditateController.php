@@ -10,4 +10,10 @@ class CanditateController extends Controller
     {
         return view('candidate');
     }
+
+    public function strore(Request $request)
+    {
+
+
+    }
 }
