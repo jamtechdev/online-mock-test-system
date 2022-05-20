@@ -10,5 +10,4 @@ body
     {color: #fff !important}button:focus{-moz-box-shadow: none !important;-webkit-box-shadow: none
          !important;box-shadow: none !important;outline-width: 0}
 
-
-         .mt-100{margin-top: 100px}body{background: #00B4DB;background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);background: linear-gradient(to right, #0083B0, #00B4DB);color: #f9f9fa;min-height: 100vh}
+ .mt-100{margin-top: 100px}body{background: #00B4DB;background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);background: linear-gradient(to right, #0083B0, #00B4DB);color: #f9f9fa;min-height: 100vh}

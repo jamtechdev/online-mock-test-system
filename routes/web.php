@@ -18,7 +18,7 @@ Use App\Http\Controllers\CanditateController;
 
  //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/',[CanditateController::class,'index']);
+
 Route::get('admin_dashboard',[CanditateController::class,'admin_dashboard']);
 //menues routes
 Route::get('menu/manage-test',[CanditateController::class,'manage_test']);
@@ -27,4 +27,6 @@ Route::get('menu/manage-technology',[CanditateController::class,'manage_technolo
 Route::get('menu/manage-user',[CanditateController::class,'manage_user']);
 
 //karishma route
+Route::get('/',[CanditateController::class,'index']);
 Route::post('/candidate_register',[CanditateController::class,'candidate_register'])->name('candidate_register');
+Route::post('/checkstatus',[CanditateController::class,'checkstatus'])->name('checkstatus');
