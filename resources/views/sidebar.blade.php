@@ -1,5 +1,4 @@
- <!-- Sidebar -->
- <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
@@ -37,10 +36,8 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Custom Components:</h6>
-                <a class="collapse-item" href="{{url('menu/manage-test')}}">Manage Test</a>
-                <a class="collapse-item" href="{{url('menu/manage-question')}}">Manage Question</a>
-                <a class="collapse-item" href="{{url('menu/manage-technology')}}">Manage Technology</a>
-                <a class="collapse-item" href="{{url('menu/manage-user')}}">Manage User</a>
+                <a class="collapse-item" href="buttons.html">Buttons</a>
+                <a class="collapse-item" href="cards.html">Cards</a>
             </div>
         </div>
     </li>
@@ -77,7 +74,7 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
             aria-expanded="true" aria-controls="collapsePages">
             <i class="fas fa-fw fa-folder"></i>
-            <span><a class="collapse-item" href="utilities-color.html">Colors</a></span>
+            <span>Pages</span>
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
@@ -123,4 +120,3 @@
     </div>
 
 </ul>
-<!-- End of Sidebar -->

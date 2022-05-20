@@ -66,8 +66,10 @@ body {
   line-height: 1.5;
   color: #858796;
   text-align: left;
-  background-color: #fff;
+  background-color: #008ab6;
 }
+
+
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
@@ -318,6 +320,7 @@ legend {
   color: inherit;
   white-space: normal;
 }
+
 
 progress {
   vertical-align: baseline;
@@ -4493,6 +4496,7 @@ input[type="button"].btn-block {
   background-clip: border-box;
   border: 1px solid #e3e6f0;
   border-radius: 0.35rem;
+
 }
 
 .card > hr {
@@ -10794,7 +10798,8 @@ a:focus {
   line-height: 1;
 }
 
-.card .card-header .dropdown .dropdown-menu {
+.
+ .card-header .dropdown .dropdown-menu {
   line-height: 1.5;
 }
 
@@ -10885,7 +10890,7 @@ form.user .custom-checkbox.small label {
 form.user .form-control-user {
   font-size: 0.8rem;
   border-radius: 10rem;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem !important;
 }
 
 form.user .btn-user {
