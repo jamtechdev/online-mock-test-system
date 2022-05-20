@@ -12,6 +12,7 @@
     <title>SB Admin 2 - Dashboard</title>
 
     <!-- Custom fonts for this template-->
+    <!-- Custom fonts for this template-->
     <link href="{{asset('sbadmin/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -19,7 +20,6 @@
 
     <!-- Custom styles for this template-->
     <link href="{{asset('sbadmin/css/sb-admin-2.min.css')}}" rel="stylesheet">
-
 </head>
 
 <body id="page-top">
@@ -42,11 +42,6 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -122,14 +117,31 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="{{url('manage-test')}}">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
+                    <span>Manage Test</span></a>
+            </li>
+             <!-- Nav Item - Charts -->
+             <li class="nav-item">
+                <a class="nav-link" href="{{url('manage-question')}}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Manage  Question</span></a>
+            </li>
+             <!-- Nav Item - Charts -->
+             <li class="nav-item">
+                <a class="nav-link" href="{{url('manage-user')}}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Manage User</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url('manage-technology')}}">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Manage Question</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Tables</span></a>
             </li>
@@ -159,18 +171,29 @@
             <div id="content">
 
                 <!-- Topbar -->
-                @include('navbar')
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+
+                    </form>
+
+                    <!-- Topbar Navbar -->
+
+
+                </nav>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                    </div>
+
 
                     <!-- Content Row -->
                     <div class="row">
@@ -274,17 +297,20 @@
                     <div class="row">
 
                         <!-- Content Column -->
+
+
                         <div class="col-lg-6 mb-4">
 
-                            <!-- Project Card Example -->
+                            <!-- Illustrations -->
 
 
-                            <!-- Color System -->
+                            <!-- Approach -->
+                            <div class="card shadow mb-4">
 
+
+                            </div>
 
                         </div>
-
-
                     </div>
 
                 </div>
@@ -294,7 +320,13 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            @include('footer')
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2021</span>
+                    </div>
+                </div>
+            </footer>
             <!-- End of Footer -->
 
         </div>
@@ -328,22 +360,22 @@
         </div>
     </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="{{asset('sbadmin/vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{asset('sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+   <!-- Bootstrap core JavaScript-->
+<script src="{{asset('sbadmin/vendor/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('sbadmin/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="{{asset('sbadmin/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+<!-- Core plugin JavaScript-->
+<script src="{{asset('sbadmin/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="{{asset('sbadmin/js/sb-admin-2.min.js')}}"></script>
+<!-- Custom scripts for all pages-->
+<script src="{{asset('sbadmin/js/sb-admin-2.min.js')}}"></script>
 
-    <!-- Page level plugins -->
-    <script src="{{asset('sbadmin/vendor/chart.js/Chart.min.js')}}"></script>
+<!-- Page level plugins -->
+<script src="{{asset('sbadmin/vendor/chart.js/Chart.min.js')}}"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="{{asset('sbadmin/js/demo/chart-area-demo.js')}}"></script>
-    <script src="{{asset('sbadmin/js/demo/chart-pie-demo.js')}}"></script>
+<!-- Page level custom scripts -->
+<script src="{{asset('sbadmin/js/demo/chart-area-demo.js')}}"></script>
+<script src="{{asset('sbadmin/js/demo/chart-pie-demo.js')}}"></script>
 
 </body>
 

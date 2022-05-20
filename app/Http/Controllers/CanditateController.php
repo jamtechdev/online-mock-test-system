@@ -8,12 +8,12 @@ class CanditateController extends Controller
 {
     public function index()
     {
-        return view('candidate-register');
+        return view('register');
     }
     // admin dashboard
     public function admin_dashboard()
     {
-        return view('dashboard');
+        return view('sb-admin.dashboard');
     }
 
     public function manage_test()

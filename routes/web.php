@@ -20,8 +20,9 @@ Auth::routes();
 
 Route::get('/',[CanditateController::class,'index']);
 Route::get('admin_dashboard',[CanditateController::class,'admin_dashboard']);
+
 //menues routes
-Route::get('menu/manage-test',[CanditateController::class,'manage_test']);
-Route::get('menu/manage-question',[CanditateController::class,'manage_question']);
-Route::get('menu/manage-technology',[CanditateController::class,'manage_technology']);
-Route::get('menu/manage-user',[CanditateController::class,'manage_user']);
+Route::get('manage-test',[CanditateController::class,'manage_test']);
+Route::get('manage-question',[CanditateController::class,'manage_question']);
+Route::get('manage-technology',[CanditateController::class,'manage_technology']);
+Route::get('manage-user',[CanditateController::class,'manage_user']);
