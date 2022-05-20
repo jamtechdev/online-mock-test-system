@@ -10,6 +10,21 @@ class CanditateController extends Controller
     {
         return view('candidate-register');
     }
+
+    public function candidate_register(Register $request){
+        dd("hello");
+        $validate = $request->validate([
+            'name' => 'required',
+            'mobno' => 'required',
+            'enmail' => 'required',
+            'experience' => 'required',
+            'note' => 'required',
+            'password' => 'required',
+            'skill' => 'required',
+        ]);
+        return redirect()->route('candidate_register');
+    }
+
     // admin dashboard
     public function admin_dashboard()
     {

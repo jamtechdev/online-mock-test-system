@@ -9,7 +9,13 @@ class Question extends Model
 {
     use HasFactory;
     protected $table = 'questions';
+
     public function technologies(){
-        return $this->hasMany(Technology::class);
+        return $this->belongsTo(Technology::class);
     }
+
+    // public function question_answer(){
+    //     return $this->hasMany('Question_Answer');
+    // }
+
 }

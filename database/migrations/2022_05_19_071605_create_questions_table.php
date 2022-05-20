@@ -18,16 +18,11 @@ return new class extends Migration
             $table->string('title');
             $table->string('summary');
             $table->unsignedBigInteger('technology_id');
-<<<<<<<< HEAD:database/migrations/2022_05_19_071605_create_questions_table.php
             $table->enum('status',['active','inactive','pending']);
             $table->enum('level',['easy','medium','hard']);
             $table->foreign('technology_id')->references('id')->on('technologies');
-========
-            $table->foreign('technology_id')->references('id')->on('technologies');
             $table->string('question');
-            $table->string('level');
             $table->string('answer');
->>>>>>>> 5fb1c7080ba7511b6f1e3f5dac2e4e12859ee76c:database/migrations/2022_05_18_122115_create_questions_table.php
             $table->timestamps();
         });
     }

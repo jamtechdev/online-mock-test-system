@@ -23,6 +23,10 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function take_answer(){
+        return $this->hasOne(Take_Answer::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *

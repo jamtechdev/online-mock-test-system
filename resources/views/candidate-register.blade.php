@@ -26,21 +26,48 @@
                 <p class="text-light">Just answer a few questions<br> so that we can personalize the right experience for you.</p>
                 <div class="card">
                     <h5 class="text-center mb-4">Powering world-class companies</h5>
-                    <form class="form-card" onsubmit="event.preventDefault()">
+                    <form class="form-card" onsubmit="event.preventDefault()" action="{{url('/candidate_register')}}" method="post">
                         <div class="row justify-content-between text-left">
-                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Name<span class="text-danger"> *</span></label> <input type="text" id="name" name="name" placeholder="Enter your first name" onblur="validate(1)"> </div>
-                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Phone number<span class="text-danger"> *</span></label> <input type="text" id="mobno" name="mobno" placeholder="Enter your mobile Number" onblur="validate(4)"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Name<span class="text-danger"> *</span></label>
+                                <input type="text" id="name" name="name" placeholder="Enter your first name" onblur="validate(1)">
+                                @error('name')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Phone number<span class="text-danger"> *</span></label>
+                                <input type="text" id="mobno" name="mobno" placeholder="Enter your mobile Number" onblur="validate(4)">
+                            </div>
                         </div>
                         <div class="row justify-content-between text-left">
-                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Email<span class="text-danger"> *</span></label> <input type="email" id="email" name="email" placeholder="Enter your email" onblur="validate(3)"> </div>
-                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Experience<span class="text-danger"> *</span></label> <input type="text" id="experience" name="experience" placeholder="Enter your experience" onblur="validate(4)"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Email<span class="text-danger"> *</span></label>
+                                <input type="email" id="email" name="email" placeholder="Enter your email" onblur="validate(3)">
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Experience<span class="text-danger"> *</span></label>
+                                <select class="form-control form-control-lg" onblur="validate(3)" name="experience">
+                                    <option>Large select</option>
+                                    <option>Large select</option>
+                                    <option>Large select</option>
+                                    <option>Large select</option>
+                                  </select>
+                               </div>
                         </div>
                         <div class="row justify-content-between text-left">
-                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Note<span class="text-danger"> *</span></label> <textarea name="note" id="note"  placeholder="Enter your Note.." style="resize:none;height:45px;"></textarea> </div>
-                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Password<span class="text-danger"> *</span></label> <input type="password" id="password" name="password" placeholder="Enter your Password" onblur="validate(4)"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Note<span class="text-danger"> *</span></label>
+                                <textarea name="note" id="note"  placeholder="Enter your Note.." style="resize:none;height:45px;"></textarea>
+                            </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Password<span class="text-danger"> *</span></label>
+                                <input type="password" id="password" name="password" placeholder="Enter your Password" onblur="validate(4)">
+                            </div>
                         </div>
-                        <div class="row d-flex justify-content-between mt-100">
-                            <div class="col-md-6"><label class="form-control-label px-3">Select Skill<span class="text-danger"> *</span></label>  <select id="choices-multiple-remove-button" name="skill" placeholder="Select upto 5 tags" multiple>
+                        <div class="row d-flex justify-content-between mb-100">
+                            <div class="col-md-12">
+                                <label class="form-control-label px-3">Select Skill<span class="text-danger"> *</span></label>
+                                <select id="choices-multiple-remove-button" name="skill" placeholder="Select upto 5 tags" multiple>
                                     <option value="HTML">HTML</option>
                                     <option value="Jquery">Jquery</option>
                                     <option value="CSS">CSS</option>
@@ -58,7 +85,9 @@
                         </div>
                         <br>
                         <div class="row text-content-between">
-                            <div class="form-group col-sm-12"> <button type="submit" class="btn btn-primary">Register</button> </div>
+                            <div class="form-group col-sm-12">
+                                <button type="submit" class="btn btn-dark">Register</button>
+                            </div>
                         </div>
                     </form>
                 </div>
