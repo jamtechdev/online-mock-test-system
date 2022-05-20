@@ -2,14 +2,58 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Candidate;
 use Illuminate\Http\Request;
 
 class CanditateController extends Controller
 {
     public function index()
     {
+<<<<<<< HEAD
         return view('register');
+=======
+        return view('frontend.candidate-register');
+>>>>>>> 2300ad5c99fbb984252f3687c7819eb4d3027b7b
     }
+
+    public function candidate_register(Request $request){
+        $validate = $request->validate([
+            'name' => 'required',
+            'mobno' => 'required',
+            'email' => 'required',
+            'experience' => 'required',
+            'note' => 'required',
+            'password' => 'required',
+            'skill' => 'required',
+        ]);
+        if($validate)
+        {
+            $candidate = new Candidate;
+            $candidate->name = $request->name;
+            $candidate->mobno = $request->mobno;
+            $candidate->experience = $request->experience;
+            $candidate->skill = $request->skill;
+            $candidate->status = $request->status;
+            $candidate->note = $request->note;
+            $candidate->password = $request->password;
+            $candidate->save();
+            return redirect()->route('checkstatus');
+
+        }
+        else
+        {
+            return redirect()->route('candidate_register');
+        }
+
+    }
+
+    // public function checkstatus(){
+    //     if( $candidate->status )
+    //     {
+    //         alert("Hello! I am an alert box!!");
+    //     }
+    // }
+
     // admin dashboard
     public function admin_dashboard()
     {
