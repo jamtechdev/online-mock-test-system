@@ -13,7 +13,7 @@ class CanditateController extends Controller
     // admin dashboard
     public function admin_dashboard()
     {
-        return view('admin-dashboard');
+        return view('dashboard');
     }
 
     public function manage_test()
